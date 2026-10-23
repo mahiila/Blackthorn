@@ -82,7 +82,7 @@ const scenes = {
     title: "The Cracked Lantern",
     text:
       "You wake in a chair with your mother's lantern in your lap. The glass is cracked, and you don't remember why.\n\n" +
-      "Three nights ago, your oldest friend, Mara, disappeared. She was the one person who always trusted you. A year ago something broke that trust. Neither of you ever spoke of it again.\n\n" +
+      "Three nights ago, your oldest friend, Mara, disappeared. She was the one person who always trusted you. A year ago something broke that trust. You know that much. You can't remember what.\n\n" +
       "She was last seen walking toward Blackthorn Castle, an abandoned castle on the hill. Nobody in the village goes near it. But every few months, someone disappears, and every time, the castle's front door is found open the next morning.\n\n" +
       "The night Mara vanished, a letter arrived in her handwriting:\n\n" +
       "“If you come looking for me, bring a candle. Don't bring anyone you trust. And whatever happens, don't let Rook open the red door.”\n\n" +
@@ -103,7 +103,7 @@ const scenes = {
       "He tells you the castle has five rooms worth searching, but it only ever lets you see three at a time.\n\n" +
       "Then you hear Mara. Her voice rises from somewhere inside the walls, calling your name. It seems to come from every direction at once.\n\n" +
       "You turn in circles, trying to find it. Rook grabs your arm.\n\n" +
-      "“That's not her.”\n“How do you know?”\n““Because the real Mara knows better than to call out in this place. She'd wait until someone proved they were really you.”\n\n" +
+      "“That's not her.”\n“How do you know?”\n“Because the real Mara knows better than to call out in this place. She'd wait until someone proved they were really you.”\n\n" +
       "Then the voice laughs, from everywhere and nowhere. It sounds exactly like her.",
     choices: [
       { text: "Let Rook pull you away from the door", go: "hub" }
@@ -310,7 +310,7 @@ const scenes = {
       } else {
         t += "The castle groans around you. Somewhere in its depths, a door slams, and the whispers fall silent. You do not know what happened to Rook. You only know that you cannot stay to find out.";
       }
-      t +=  "You lead Mara towards the front gate. The sky beyond the ruined walls has begun to pale. When you step outside, the first light of morning touches the cracked lantern.\n\n" +
+      t +=  "\n\nYou lead Mara towards the front gate. The sky beyond the ruined walls has begun to pale. When you step outside, the first light of morning touches the cracked lantern.\n\n" +
       "For the first time, it gives no light of its own. It doesn't need to.\n\n" +
       "Behind you, Blackthorn Castle stands silent. Ahead, the road home waits. You and Mara begin to walk.";
       return t;
@@ -336,7 +336,7 @@ const scenes = {
     title: "The Hollow Crown",
     text:
       "The drawings taught you that the castle can only imitate. You give it your voice—not in surrender, but as a command. For the first time, the whispers fall silent.\n\n" +
-      "The doors open. The whispers go quiet. The castle is yours.\n\n" +
+      "The doors open. The castle is yours.\n\n" +
       "But every stolen voice now speaks inside your head. Somewhere among them, Mara is calling you, and you can no longer tell whether it is her or the castle."
   },
   nameless: {
@@ -350,7 +350,6 @@ const scenes = {
       "The girl beside you smiles with a face that is slightly too perfect. “I forgive you,” she says. You don't remember what for.\n\n" +
       "You escaped with your life. You cannot remember what that life meant."
   },
-
   light: {
     ending: true,
     label: "ENDING 5 OF 8 · ONE FLAME FOR ANOTHER",
