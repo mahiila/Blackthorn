@@ -274,7 +274,7 @@ body[data-scene="twoDoors"] .art-symbol::before { content: "◈"; }
   .story-paper { flex: 1; min-height: 0; display: flex; flex-direction: column; }
   .story-meta { flex: none; }
   .story-scroll { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; padding-right: 6px; }
-  .choices { flex: none; max-height: 55%; overflow-y: auto; overflow-x: hidden; padding-top: 4px; }
+  .choices { flex: none; max-height: 45%; overflow-y: auto; overflow-x: hidden; padding-top: 4px; }
   .side-col { min-height: 0; overflow-y: auto; align-content: start; }
 }
 @media (min-width: 1024px) {
@@ -282,14 +282,16 @@ body[data-scene="twoDoors"] .art-symbol::before { content: "◈"; }
   .is-ending .story-scroll { flex: 0 1 auto; }
 }
 @media (min-width: 1024px) and (max-height: 900px) {
-  .room-art { height: 120px; }
-  .is-ending .room-art { height: 120px; }
+  .room-art { height: clamp(100px, 14vh, 150px); }
+  .is-ending .room-art { height: clamp(110px, 16vh, 170px); }
   .art-symbol::before { font-size: 30px; }
   .art-caption { bottom: 10px; }
   .rook-avatar, .sidebar-quote { display: none; }
   .story-paper { border-top: 1px solid rgba(199, 166, 106, 0.23); }
 }
 @media (min-width: 1024px) and (max-height: 700px) {
+    .room-art { height: 80px;}
+    .is-ending .room-art { height: 100px;}
   .art-frame { display: none; }
   .story-paper { border-top: 1px solid rgba(199, 166, 106, 0.23); }
 }
