@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d12">
+  <title>Blackthorn: The Castle of Stolen Voices</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+  <!-- TOP BAR -->
+  <header class="topbar relative z-10 flex h-14 items-center justify-between px-5 md:px-16">
+    <span class="brand flex items-center gap-3"><span class="brand-mark">✦</span> BLACKTHORN</span>
+    <div class="flex items-center gap-4">
+      <span class="run-label">A STORY OF SECRETS</span>
+      <button id="restart-btn" class="icon-button" aria-label="Restart game" title="Begin a new run">↻ <span>Restart</span></button>
+    </div>
+  </header>
+  <main class="relative z-10 mx-auto max-w-[1440px] px-5 pb-16 md:px-16">
+    <!-- TITLE SCREEN -->
+    <section id="title-screen" class="title-copy mx-auto max-w-2xl text-center">
+      <p class="eyebrow">A GOTHIC HORROR STORY GAME</p>
+      <h1>Blackthorn</h1>
+      <p class="subtitle candle">THE CASTLE OF STOLEN VOICES</p>
+      <div class="ornament"><span></span> ✦ <span></span></div>
+      <p class="tagline">Every secret has a price.<br>You never choose what it takes.</p>
+      <div class="intro-copy">
+      <p>Your oldest friend disappeared three nights ago.</p>
+      <p>A year ago, you broke her trust.</p>
+      <p>You cannot remember how.</p>
+      <p>A letter in her handwriting asks you to bring a candle.</p>
+      <p >Something inside the castle knows how to sound exactly like her.</p>
+     </div>
+      <button id="begin-btn" class="primary-button">ENTER THE CASTLE <span>→</span></button>
+    </section>
+    <!-- GAME SCREEN -->
+    <section id="game-screen" class="hidden">
+      <div class="game-heading">
+        <p id="label" class="eyebrow"></p>
+        <h2 id="title" class="room-title"></h2>
+      </div>
+      <div class="game-layout grid gap-5 lg:grid-cols-[minmax(0,1fr)_260px]">
+        <!-- Story column -->
+        <section id="card" class="min-w-0">
+          <div class="art-frame room-art">
+            <span class="art-symbol"></span>
+            <div class="art-vignette"></div>
+            <span id="art-caption" class="art-caption"></span>
+          </div>
+          <div class="story-paper">
+            <div class="story-meta"><span>✦ &nbsp; THE CASTLE SPEAKS</span></div>
+            <div class="story-scroll">
+              <div id="story" class="story-text"></div>
+              <p id="notice" class="notice"></p>
+            </div>
+            <div id="choices" class="choices"></div>
+          </div>
+        </section>
+        <!-- Side panel -->
+        <aside class="side-col grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+          <div class="side-panel companion-panel">
+            <div class="panel-heading"><span>YOUR COMPANION</span><span class="tiny-seal">♜</span></div>
+            <div class="rook-avatar"><span>R</span></div>
+            <h3>Rook</h3>
+            <p id="rook-status" class="companion-status"></p>
+          </div>
+
+          <div class="side-panel">
+            <div class="panel-heading"><span>YOUR CONDITION</span><span>✧</span></div>
+            <ul class="condition-list">
+              <li><span class="condition-icon">♥</span><span>Blood</span><b id="st-blood">Fine</b></li>
+              <li><span class="condition-icon">☼</span><span>Light</span><b id="st-light">Burning</b></li>
+              <li><span class="condition-icon">♙</span><span>Friend</span><b id="st-friend">Rook nearby</b></li>
+              <li><span class="condition-icon">◇</span><span>Memory</span><b id="st-memory">Clear</b></li>
+              <li><span class="condition-icon">◌</span><span>Voice</span><b id="st-voice">Your own</b></li>
+            </ul>
+          </div>
+          <div class="side-panel">
+            <div class="panel-heading"><span>CLUES FOUND</span><span id="clue-count">00</span></div>
+            <div id="clue-list" class="clue-list"></div>
+          </div>
+          <p class="sidebar-quote sm:col-span-2 lg:col-span-1">“The truth opens doors.<br>The price decides what remains.”</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
